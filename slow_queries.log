@@ -1,0 +1,68 @@
+2024-05-10 16:32:16,062 - SELECT pg_is_in_recovery() ran in [91m 0.1269855499267578s [0m
+2024-05-10 16:32:16,442 - SELECT current_setting('is_superuser') ran in [91m 0.2535288333892822s [0m
+2024-05-10 16:32:17,395 - SELECT table_name, column_name, udt_name::regtype FROM information_schema.columns ORDER BY table_name, ordinal_position ran in [91m 0.8254795074462891s [0m
+2024-05-10 16:32:17,817 - SELECT name, label_col, sort, count_cutoff, id_ordered, out_of_order, has_extras, stats_valid, total, include_nones FROM meta_tables ran in [91m 0.25561046600341797s [0m
+2024-05-10 17:09:15,899 - SELECT pg_is_in_recovery() ran in [91m 0.15550971031188965s [0m
+2024-05-10 17:09:16,281 - SELECT current_setting('is_superuser') ran in [91m 0.25362730026245117s [0m
+2024-05-10 17:09:18,982 - SELECT table_name, column_name, udt_name::regtype FROM information_schema.columns ORDER BY table_name, ordinal_position ran in [91m 2.568723678588867s [0m
+2024-05-10 17:09:19,587 - SELECT name, label_col, sort, count_cutoff, id_ordered, out_of_order, has_extras, stats_valid, total, include_nones FROM meta_tables ran in [91m 0.4692239761352539s [0m
+2024-05-10 17:18:59,474 - SELECT "id", "authors", "cat", "content", "last_author", "timestamp", "title", "status", "type", "links", "defines", "source", "source_name" FROM (SELECT DISTINCT ON (id) "id", "authors", "cat", "content", "last_author", "timestamp", "title", "status", "type", "links", "defines", "source", "source_name" FROM kwl_knowls WHERE id LIKE 'columns.ec_curvedata.%' AND type = 2 AND status >= 0 ORDER BY id, timestamp) knowls ORDER BY id ran in [91m 0.38292479515075684s [0m
+2024-05-10 17:19:17,729 - SELECT count FROM "ec_torsion_growth_counts" WHERE cols = '["degree"]' AND values = '[2]' AND split = false ran in [91m 0.40047240257263184s [0m
+2024-05-10 17:19:18,660 - SELECT "lmfdb_label", "degree", "field", "torsion", "conductor" FROM "ec_torsion_growth" WHERE "degree" = 2 ORDER BY "lmfdb_label", "degree" LIMIT 1000 ran in [91m 0.8027896881103516s [0m
+2024-05-10 17:19:18,662 - Replicate with db.ec_torsion_growth.analyze({'degree': 2}, 2, 1000, 0)
+2024-05-10 17:19:30,255 - SELECT "id", "authors", "cat", "content", "last_author", "timestamp", "title", "status", "type", "links", "defines", "source", "source_name" FROM (SELECT DISTINCT ON (id) "id", "authors", "cat", "content", "last_author", "timestamp", "title", "status", "type", "links", "defines", "source", "source_name" FROM kwl_knowls WHERE id LIKE 'columns.ec_torsion_growth.%' AND type = 2 AND status >= 0 ORDER BY id, timestamp) knowls ORDER BY id ran in [91m 0.25947999954223633s [0m
+2024-05-10 17:19:46,911 - SELECT count FROM "ec_torsion_growth_counts" WHERE cols = '["degree"]' AND values = '[2]' AND split = false ran in [91m 0.25476884841918945s [0m
+2024-05-10 17:19:48,797 - SELECT "ec_torsion_growth"."lmfdb_label", "ec_torsion_growth"."torsion", "ec_torsion_growth"."degree", "ec_curvedata"."absD" FROM "ec_torsion_growth" JOIN "ec_curvedata" ON "ec_torsion_growth"."lmfdb_label" = "ec_curvedata"."lmfdb_label" WHERE "ec_torsion_growth"."degree" = 2 ORDER BY "ec_torsion_growth"."lmfdb_label", "ec_torsion_growth"."degree" LIMIT 1000 ran in [91m 1.7577567100524902s [0m
+2024-05-10 17:19:48,799 - Replicate with db.ec_torsion_growth.analyze({'degree': 2}, ['lmfdb_label', 'torsion', 'degree', ('ec_curvedata', 'absD')], 1000, 0)
+2024-05-10 17:20:08,808 - SELECT count FROM "ec_nfcurves_counts" WHERE cols = '["rank"]' AND values = '[1]' AND split = false ran in [91m 1.1579384803771973s [0m
+2024-05-10 17:20:12,528 - SELECT "ec_nfcurves"."label", "nf_fields"."r2" FROM "ec_nfcurves" JOIN "nf_fields" ON "ec_nfcurves"."field_label" = "nf_fields"."label" WHERE "ec_nfcurves"."rank" = 1 ORDER BY "ec_nfcurves"."field_label", "ec_nfcurves"."conductor_norm", "ec_nfcurves"."conductor_label", "ec_nfcurves"."iso_nlabel", "ec_nfcurves"."number" LIMIT 1000 ran in [91m 3.5903468132019043s [0m
+2024-05-10 17:20:12,529 - Replicate with db.ec_nfcurves.analyze({'rank': 1}, ['label', ('nf_fields', 'r2')], 1000, 0)
+2024-05-10 17:40:42,510 - SELECT pg_is_in_recovery() ran in [91m 0.12140512466430664s [0m
+2024-05-10 17:40:42,876 - SELECT current_setting('is_superuser') ran in [91m 0.24229788780212402s [0m
+2024-05-10 17:40:43,796 - SELECT table_name, column_name, udt_name::regtype FROM information_schema.columns ORDER BY table_name, ordinal_position ran in [91m 0.7904884815216064s [0m
+2024-05-10 17:40:44,208 - SELECT name, label_col, sort, count_cutoff, id_ordered, out_of_order, has_extras, stats_valid, total, include_nones FROM meta_tables ran in [91m 0.24414920806884766s [0m
+2024-05-10 17:44:54,137 - SELECT pg_is_in_recovery() ran in [91m 0.13690662384033203s [0m
+2024-05-10 17:44:54,529 - SELECT current_setting('is_superuser') ran in [91m 0.2552773952484131s [0m
+2024-05-10 17:44:55,495 - SELECT table_name, column_name, udt_name::regtype FROM information_schema.columns ORDER BY table_name, ordinal_position ran in [91m 0.8298871517181396s [0m
+2024-05-10 17:44:55,889 - SELECT name, label_col, sort, count_cutoff, id_ordered, out_of_order, has_extras, stats_valid, total, include_nones FROM meta_tables ran in [91m 0.2568705081939697s [0m
+2024-05-10 17:45:33,267 - SELECT count FROM "ec_torsion_growth_counts" WHERE cols = '["degree"]' AND values = '[2]' AND split = false ran in [91m 0.25560569763183594s [0m
+2024-05-10 17:45:33,910 - SELECT "lmfdb_label", "degree", "field", "torsion", "conductor" FROM "ec_torsion_growth" WHERE "degree" = 2 ORDER BY "lmfdb_label", "degree" LIMIT 1000 ran in [91m 0.5128433704376221s [0m
+2024-05-10 17:45:33,912 - Replicate with db.ec_torsion_growth.analyze({'degree': 2}, 2, 1000, 0)
+2024-05-10 17:45:39,132 - SELECT count FROM "ec_torsion_growth_counts" WHERE cols = '["degree"]' AND values = '[2]' AND split = false ran in [91m 0.25487732887268066s [0m
+2024-05-10 17:45:39,773 - SELECT "lmfdb_label", "degree", "field", "torsion", "conductor" FROM "ec_torsion_growth" WHERE "degree" = 2 ORDER BY "lmfdb_label", "degree" LIMIT 1000 ran in [91m 0.5111980438232422s [0m
+2024-05-10 17:45:39,775 - Replicate with db.ec_torsion_growth.analyze({'degree': 2}, 2, 1000, 0)
+2024-05-10 17:45:59,971 - SELECT count FROM "ec_torsion_growth_counts" WHERE cols = '["degree"]' AND values = '[2]' AND split = false ran in [91m 0.2556629180908203s [0m
+2024-05-10 17:46:00,612 - SELECT "lmfdb_label", "degree", "field", "torsion", "conductor" FROM "ec_torsion_growth" WHERE "degree" = 2 ORDER BY "lmfdb_label", "degree" LIMIT 1000 ran in [91m 0.5119619369506836s [0m
+2024-05-10 17:46:00,613 - Replicate with db.ec_torsion_growth.analyze({'degree': 2}, 2, 1000, 0)
+2024-05-10 17:46:29,631 - SELECT count FROM "ec_torsion_growth_counts" WHERE cols = '["degree"]' AND values = '[2]' AND split = false ran in [91m 0.2552058696746826s [0m
+2024-05-10 17:46:30,272 - SELECT "lmfdb_label", "degree", "field", "torsion", "conductor" FROM "ec_torsion_growth" WHERE "degree" = 2 ORDER BY "lmfdb_label", "degree" LIMIT 1000 ran in [91m 0.5111687183380127s [0m
+2024-05-10 17:46:30,274 - Replicate with db.ec_torsion_growth.analyze({'degree': 2}, 2, 1000, 0)
+2024-05-10 17:46:53,474 - SELECT count FROM "ec_torsion_growth_counts" WHERE cols = '["degree"]' AND values = '[2]' AND split = false ran in [91m 0.2550640106201172s [0m
+2024-05-10 17:46:54,114 - SELECT "lmfdb_label", "degree", "field", "torsion", "conductor" FROM "ec_torsion_growth" WHERE "degree" = 2 ORDER BY "lmfdb_label", "degree" LIMIT 1000 ran in [91m 0.5111255645751953s [0m
+2024-05-10 17:46:54,116 - Replicate with db.ec_torsion_growth.analyze({'degree': 2}, 2, 1000, 0)
+2024-05-10 17:47:19,653 - SELECT count FROM "ec_torsion_growth_counts" WHERE cols = '["degree"]' AND values = '[2]' AND split = false ran in [91m 0.2550818920135498s [0m
+2024-05-10 17:47:20,291 - SELECT "lmfdb_label", "degree", "field", "torsion", "conductor" FROM "ec_torsion_growth" WHERE "degree" = 2 ORDER BY "lmfdb_label", "degree" LIMIT 1000 ran in [91m 0.5105597972869873s [0m
+2024-05-10 17:47:20,292 - Replicate with db.ec_torsion_growth.analyze({'degree': 2}, 2, 1000, 0)
+2024-05-10 17:47:21,865 - SELECT count FROM "ec_torsion_growth_counts" WHERE cols = '["degree"]' AND values = '[2]' AND split = false ran in [91m 0.2542142868041992s [0m
+2024-05-10 17:47:22,505 - SELECT "lmfdb_label", "degree", "field", "torsion", "conductor" FROM "ec_torsion_growth" WHERE "degree" = 2 ORDER BY "lmfdb_label", "degree" LIMIT 1000 ran in [91m 0.5113723278045654s [0m
+2024-05-10 17:47:22,506 - Replicate with db.ec_torsion_growth.analyze({'degree': 2}, 2, 1000, 0)
+2024-05-10 17:48:59,371 - SELECT pg_is_in_recovery() ran in [91m 0.1305849552154541s [0m
+2024-05-10 17:48:59,774 - SELECT current_setting('is_superuser') ran in [91m 0.2714412212371826s [0m
+2024-05-10 17:49:00,833 - SELECT table_name, column_name, udt_name::regtype FROM information_schema.columns ORDER BY table_name, ordinal_position ran in [91m 0.9144077301025391s [0m
+2024-05-10 17:49:01,272 - SELECT name, label_col, sort, count_cutoff, id_ordered, out_of_order, has_extras, stats_valid, total, include_nones FROM meta_tables ran in [91m 0.2628355026245117s [0m
+2024-05-10 17:49:05,762 - SELECT count FROM "ec_torsion_growth_counts" WHERE cols = '["degree"]' AND values = '[2]' AND split = false ran in [91m 0.26079583168029785s [0m
+2024-05-10 17:49:06,418 - SELECT "lmfdb_label", "degree", "field", "torsion", "conductor" FROM "ec_torsion_growth" WHERE "degree" = 2 ORDER BY "lmfdb_label", "degree" LIMIT 1000 ran in [91m 0.523773193359375s [0m
+2024-05-10 17:49:06,420 - Replicate with db.ec_torsion_growth.analyze({'degree': 2}, 2, 1000, 0)
+2024-05-10 17:49:37,844 - SELECT count FROM "ec_torsion_growth_counts" WHERE cols = '["degree"]' AND values = '[2]' AND split = false ran in [91m 0.26151013374328613s [0m
+2024-05-10 17:49:38,501 - SELECT "lmfdb_label", "degree", "field", "torsion", "conductor" FROM "ec_torsion_growth" WHERE "degree" = 2 ORDER BY "lmfdb_label", "degree" LIMIT 1000 ran in [91m 0.5227775573730469s [0m
+2024-05-10 17:49:38,502 - Replicate with db.ec_torsion_growth.analyze({'degree': 2}, 2, 1000, 0)
+2024-05-10 17:50:20,533 - SELECT count FROM "ec_torsion_growth_counts" WHERE cols = '["degree"]' AND values = '[2]' AND split = false ran in [91m 0.2609531879425049s [0m
+2024-05-10 17:50:21,188 - SELECT "lmfdb_label", "degree", "field", "torsion", "conductor" FROM "ec_torsion_growth" WHERE "degree" = 2 ORDER BY "lmfdb_label", "degree" LIMIT 1000 ran in [91m 0.5221495628356934s [0m
+2024-05-10 17:50:21,190 - Replicate with db.ec_torsion_growth.analyze({'degree': 2}, 2, 1000, 0)
+2024-05-10 17:50:31,463 - SELECT count FROM "ec_torsion_growth_counts" WHERE cols = '["degree"]' AND values = '[2]' AND split = false ran in [91m 0.2610149383544922s [0m
+2024-05-10 17:50:32,118 - SELECT "lmfdb_label", "degree", "field", "torsion", "conductor" FROM "ec_torsion_growth" WHERE "degree" = 2 ORDER BY "lmfdb_label", "degree" LIMIT 1000 ran in [91m 0.5225660800933838s [0m
+2024-05-10 17:50:32,120 - Replicate with db.ec_torsion_growth.analyze({'degree': 2}, 2, 1000, 0)
+2024-05-10 18:00:31,625 - SELECT t.relname, l.mode, l.pid, age(clock_timestamp(), a.backend_start) FROM pg_locks l JOIN pg_stat_all_tables t ON l.relation = t.relid JOIN pg_stat_activity a ON l.pid = a.pid WHERE l.granted AND t.schemaname <> 'pg_toast'::name AND t.schemaname <> 'pg_catalog'::name ran in [91m 0.26885294914245605s [0m
+2024-05-10 18:10:26,451 - SELECT count FROM "ec_torsion_growth_counts" WHERE cols = '["$cond"]' AND values = '[[{"$mod": ["conductor", 2]}, {"degree": 2}]]' AND split = false ran in [91m 0.2617168426513672s [0m
+2024-05-10 18:10:37,688 - SELECT count FROM "ec_torsion_growth_counts" WHERE cols = '["$cond"]' AND values = '[[{"$mod": ["conductor", 2]}, {"degree": 2}, 0]]' AND split = false ran in [91m 0.2620701789855957s [0m
+2024-05-10 18:11:12,859 - SELECT count FROM "ec_torsion_growth_counts" WHERE cols = '["$cond"]' AND values = '[[{"$mod": ["conductor", 2]}, {"degree": 2}, {"degree": 2}]]' AND split = false ran in [91m 0.2614471912384033s [0m
