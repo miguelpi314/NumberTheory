@@ -36,3 +36,6 @@ Thumbs.db
 *.app
 *.exe
 *.war
+
+# Pickle
+*.pkl
