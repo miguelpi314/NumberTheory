@@ -10,6 +10,7 @@
 
 # Log files
 *.log
+flasklog
 
 # Environment variables
 .env
@@ -22,6 +23,7 @@ flagged/
 
 # JetBrains IDE
 .idea/
+torsion_inverse_problem/data/
 
 # Unit test reports
 TEST*.xml
