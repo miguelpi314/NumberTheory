@@ -1,8 +1,0 @@
-2024-05-10 13:07:10,992 - SELECT pg_is_in_recovery() ran in [91m 0.12674927711486816s [0m
-2024-05-10 13:07:11,371 - SELECT current_setting('is_superuser') ran in [91m 0.2524995803833008s [0m
-2024-05-10 13:07:12,326 - SELECT table_name, column_name, udt_name::regtype FROM information_schema.columns ORDER BY table_name, ordinal_position ran in [91m 0.8280766010284424s [0m
-2024-05-10 13:07:12,710 - SELECT name, label_col, sort, count_cutoff, id_ordered, out_of_order, has_extras, stats_valid, total, include_nones FROM meta_tables ran in [91m 0.2544410228729248s [0m
-2024-05-10 13:21:01,203 - SELECT pg_is_in_recovery() ran in [91m 0.1176917552947998s [0m
-2024-05-10 13:21:01,559 - SELECT current_setting('is_superuser') ran in [91m 0.23605871200561523s [0m
-2024-05-10 13:21:02,491 - SELECT table_name, column_name, udt_name::regtype FROM information_schema.columns ORDER BY table_name, ordinal_position ran in [91m 0.8062419891357422s [0m
-2024-05-10 13:21:02,853 - SELECT name, label_col, sort, count_cutoff, id_ordered, out_of_order, has_extras, stats_valid, total, include_nones FROM meta_tables ran in [91m 0.23681879043579102s [0m
